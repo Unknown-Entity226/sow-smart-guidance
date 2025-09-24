@@ -31,6 +31,39 @@ const Index = () => {
     setCurrentState("recommendations");
   };
 
+  const handleNavigation = (section: string) => {
+    switch (section) {
+      case "home":
+        setCurrentState("hero");
+        break;
+      case "recommendations":
+        if (farmerData) {
+          setCurrentState("recommendations");
+        } else {
+          setCurrentState("form");
+        }
+        break;
+      case "market":
+        // For now, navigate to recommendations or show a coming soon message
+        if (farmerData) {
+          setCurrentState("recommendations");
+        } else {
+          setCurrentState("form");
+        }
+        break;
+      case "support":
+        // For now, navigate to recommendations or show a coming soon message
+        if (farmerData) {
+          setCurrentState("recommendations");
+        } else {
+          setCurrentState("form");
+        }
+        break;
+      default:
+        setCurrentState("hero");
+    }
+  };
+
   const renderContent = () => {
     switch (currentState) {
       case "hero":
@@ -71,7 +104,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Header />
+      <Header onNavigate={handleNavigation} currentState={currentState} />
       {renderContent()}
     </div>
   );
