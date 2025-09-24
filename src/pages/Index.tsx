@@ -5,8 +5,10 @@ import { FarmerForm } from "@/components/FarmerForm";
 import { CropRecommendations } from "@/components/CropRecommendations";
 import { CropDetails } from "@/components/CropDetails";
 import { AIInsights } from "@/components/AIInsights";
+import { MarketPrices } from "@/components/MarketPrices";
+import { Support } from "@/components/Support";
 
-type AppState = "hero" | "form" | "recommendations" | "crop-details";
+type AppState = "hero" | "form" | "recommendations" | "crop-details" | "market" | "support";
 
 const Index = () => {
   const [currentState, setCurrentState] = useState<AppState>("hero");
@@ -44,20 +46,10 @@ const Index = () => {
         }
         break;
       case "market":
-        // For now, navigate to recommendations or show a coming soon message
-        if (farmerData) {
-          setCurrentState("recommendations");
-        } else {
-          setCurrentState("form");
-        }
+        setCurrentState("market");
         break;
       case "support":
-        // For now, navigate to recommendations or show a coming soon message
-        if (farmerData) {
-          setCurrentState("recommendations");
-        } else {
-          setCurrentState("form");
-        }
+        setCurrentState("support");
         break;
       default:
         setCurrentState("hero");
@@ -95,6 +87,18 @@ const Index = () => {
                 onBack={handleBackToRecommendations} 
               />
             </div>
+          </div>
+        );
+      case "market":
+        return (
+          <div className="min-h-screen py-20 px-4">
+            <MarketPrices />
+          </div>
+        );
+      case "support":
+        return (
+          <div className="min-h-screen py-20 px-4">
+            <Support />
           </div>
         );
       default:
