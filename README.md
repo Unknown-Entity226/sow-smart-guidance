@@ -1,73 +1,193 @@
-# Welcome to your Lovable project
+# AI-Driven Crop Advisory and Farmer Assistance Platform
 
-## Project info
+## Problem Statement
+Indian farmers often lack access to reliable, personalized, and localized agricultural guidance. Information related to crop selection, disease management, government schemes, and direct market access is scattered, non-intuitive, and rarely available in regional languages.
 
-**URL**: https://lovable.dev/projects/f0626217-cbab-4799-8122-a54b584e9a62
+This project proposes an AI-based crop advisory web platform that delivers end-to-end decision support to farmers, from crop selection to post-harvest selling, with full multilingual support for 22 Indian languages.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## Objectives
+- Provide personalized crop recommendations using farmer-specific data
+- Enable data-driven agricultural decision-making
+- Increase awareness of MSP, market prices, subsidies, NGOs, and startups
+- Reduce farmer dependency on middlemen
+- Ensure inclusivity through multilingual accessibility
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f0626217-cbab-4799-8122-a54b584e9a62) and start prompting.
+## System Overview
 
-Changes made via Lovable will be committed automatically to this repo.
+### High-Level Workflow
+1. Farmer accesses the website  
+2. Farmer fills a structured data collection form  
+3. AI engine processes inputs and generates crop recommendations  
+4. Farmer selects a recommended crop  
+5. System displays detailed crop, market, and support information  
+6. Continuous advisory and post-harvest recommendations are provided  
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Farmer Input Parameters
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+| Category | Details |
+|--------|--------|
+| Personal Details | Name, Location, Valid Identity Number |
+| Farm Information | Farm Size, Budget |
+| Workforce | Number of Working Members |
+| Crop History | Previously Cultivated Crops |
+| Resources | Available Machinery |
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Crop Recommendation Module
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### AI Logic Considers
+- Historical crop data  
+- Regional climatic suitability  
+- Budget and resource constraints  
+- Crop rotation principles  
+- Availability of labor and machinery  
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Output
+- Ranked list of the most suitable crops for the farmer’s land
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+---
 
-**Edit a file directly in GitHub**
+## Crop Insight Module
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Once a farmer selects a crop, the system displays:
 
-**Use GitHub Codespaces**
+| Parameter | Description |
+|---------|------------|
+| MSP | Government Minimum Support Price |
+| Market Rate | Average or real-time market price |
+| Estimated Cost | Cultivation and input costs |
+| Time Period | Sowing to harvesting duration |
+| Diseases | Common crop diseases |
+| Fertilizers | Optimal fertilizer recommendations |
+| Disease Solutions | Preventive and corrective measures |
+| Subsidies | Relevant government schemes |
+| Seed Access | Nearby NGOs and startup initiatives |
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## Post-Harvest Intelligence System
 
-This project is built with:
+- Tracks the crop lifecycle
+- Two weeks before harvest, the farmer receives:
+  - Next crop recommendations
+  - Crop rotation suggestions
+  - Seasonal planning guidance
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+This enables continuous agricultural planning instead of single-cycle advisory.
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/f0626217-cbab-4799-8122-a54b584e9a62) and click on Share -> Publish.
+## Market and Selling Assistance
+The platform provides:
+- Direct-to-consumer selling platforms
+- Marketplace and mandi information
+- Agricultural e-commerce websites
+- Market price awareness to reduce exploitation
 
-## Can I connect a custom domain to my Lovable project?
+---
 
-Yes, you can!
+## Smart Machinery Recommendation System
+- Budget-aware machinery recommendations
+- Purchase links from verified platforms
+- Seasonal relevance analysis
+- Long-term productivity and ROI focus
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## Multilingual Support
+
+The platform supports 22 Indian languages, including:
+
+Hindi, English, Bengali, Telugu, Marathi, Tamil, Urdu, Gujarati, Kannada, Odia, Malayalam, Punjabi, Assamese, Maithili, Sanskrit, Konkani, Dogri, Kashmiri, Sindhi, Manipuri, Bodo, Santhali.
+
+Language switching is enabled through a real-time translation toggle.
+
+---
+
+## AI and ML Features
+- Rule-based and ML-assisted crop recommendation engine
+- Seasonal and temporal advisory logic
+- Notification and alert system
+
+### Future AI Enhancements
+- Yield prediction models
+- Weather-integrated advisory
+- Soil health analysis
+- Voice-based farmer interaction
+
+---
+
+## Technology Stack
+
+### Frontend
+- HTML5
+- CSS3
+- JavaScript
+
+### Backend
+- Python (Flask)
+- RESTful APIs
+
+### AI and Data Processing
+- Python
+- Scikit-learn
+- Data preprocessing pipelines
+
+### Database
+- MongoDB
+
+### External Integrations
+- Government MSP data sources
+- Market price APIs
+- Translation APIs
+
+---
+
+## Security and Privacy
+- Secure handling of farmer identity data
+- Encrypted data storage
+- Scalable authentication framework (future scope)
+
+---
+
+## Key Benefits
+
+### For Farmers
+- Improved profitability
+- Reduced crop failure risk
+- Better planning and awareness
+- Language accessibility
+
+### For Government and NGOs
+- Improved scheme outreach
+- Centralized farmer insights
+- Transparent subsidy dissemination
+
+---
+
+## Future Scope
+- Mobile application support
+- Voice-based AI assistant
+- IoT sensor integration
+- Satellite imagery-based analysis
+- Blockchain-based supply chain transparency
+
+---
+
+## Smart India Hackathon Alignment
+- Addresses agriculture and farmer welfare domain
+- Integrates AI, ML, and multilingual technology
+- Scalable, inclusive, and real-world applicable
+- High socio-economic impact
+
+---
+
+## License
+This project is developed for Smart India Hackathon (SIH) and academic use.
